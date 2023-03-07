@@ -1,3 +1,2 @@
-#!/bin/bash 
-echo -en $(cut -c1 | tr -d '\n')'\n'
-
+#!/bin/bash
+cut -c 1 | paste -s -d ''
