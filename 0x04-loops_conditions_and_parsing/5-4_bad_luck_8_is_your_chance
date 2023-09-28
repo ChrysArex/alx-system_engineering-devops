@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#displays "Best School" 10 times
+a=1
+while [ $a -lt 11 ]; do
+  if [ $a -ne 4 ] && [ $a -ne 8 ]; then
+    echo "Best School"
+  elif [ $a -eq 4 ]; then
+    echo "bad luck"
+  elif [ $a -eq 8 ]; then
+    echo "good luck"
+  fi
+  a=$((a + 1))
+
+done

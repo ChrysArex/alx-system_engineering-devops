@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#displays "Best School" 10 times and "hi" at the 9th iteration
+a=1
+while [ $a -lt 11 ]; do
+  if [ $a -ne 9 ]; then
+    echo "Best School"
+  else
+    echo "Best School"
+    echo "Hi"
+  fi
+  a=$((a + 1))
+
+done
