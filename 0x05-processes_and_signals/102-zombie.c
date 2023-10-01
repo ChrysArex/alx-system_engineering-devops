@@ -20,7 +20,7 @@ int infinite_while(void)
  */
 int main(void)
 {
-	pid_t cpid, ppid = getpid();
+	pid_t cpid;
 	int i;
 
 	for (i = 0; i < 5; i++)
