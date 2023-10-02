@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Bash script that displays the content of the directory /etc/passwd
+while IFS=":" read -r -a a; do
+  echo "The user ${a[0]} is part of the ${a[3]} gang, lives in ${a[5]} and rides ${a[6]}. ${a[2]}'s place is protected by the passcode ${a[1]}, more info about the user here: ${a[4]}"
+done < /etc/passwd
