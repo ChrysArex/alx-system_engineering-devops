@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Bash script that displays the content of the directory /etc/passwd
+while IFS=":" read -r -a a; do
+  echo "${a[0]}:${a[2]}:${a[5]}"
+done < /etc/passwd
