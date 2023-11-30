@@ -4,5 +4,7 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo echo "<html><body>Hello World!</body></html>" > /var/www/html/hello.html
-sudo nginx -s reload
+echo "Hello World!" > hello.html
+sudo mv hello.html /var/www/html
+sudo sed -i '/location \/ {/a\		index hello.html;' /etc/nginx/sites-available/default
+sudo service nginx restart
