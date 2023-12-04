@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script that install and configure an nginx server when executed
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" > hello.html
+sudo mv hello.html /var/www/html
+sudo sed -i '/location \/ {/a\		index hello.html;' /etc/nginx/sites-available/default
+sudo service nginx restart
