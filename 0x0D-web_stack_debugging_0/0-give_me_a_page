@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#fix appach server to return "Hello Holberton" when querying the root of it
+echo "Hello Holberton" > /var/www/index.html
