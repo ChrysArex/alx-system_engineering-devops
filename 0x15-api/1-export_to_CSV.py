@@ -26,5 +26,6 @@ if __name__ == "__main__":
     with open(f_name, "w", encoding="utf-8") as f:
         for i in range(starting_point.get(id_), starting_point.get(id_) + 20):
             first = '"{}","{}",'.format(r[i].get('userId'), emp_name)
-            second = '"{}","{}"\n'.format(r[i].get('completed'), r[i].get('title'))
+            second = '"{}","{}"\n'.format(r[i].get('completed'),
+                                          r[i].get('title'))
             f.write(first + second)
