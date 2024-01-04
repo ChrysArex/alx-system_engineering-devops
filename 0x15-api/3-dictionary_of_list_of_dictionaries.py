@@ -24,7 +24,9 @@ if __name__ == "__main__":
     f_name = "todo_all_employees.json"
     with open(f_name, "w", encoding="utf-8") as f:
         for id_ in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]:
-            r1 = requests.get(f'https://jsonplaceholder.typicode.com/users/{id_}')
+            r1 = requests.get(
+                    f'https://jsonplaceholder.typicode.com/users/{id_}'
+                    )
             emp_name = r1.json().get("username")
 
             for i in range(starting_point.get(id_),
