@@ -25,6 +25,6 @@ if __name__ == "__main__":
     f_name = id_ + ".csv"
     with open(f_name, "w", encoding="utf-8") as f:
         for i in range(starting_point.get(id_), starting_point.get(id_) + 20):
-            first = f'{r[i].get("userId")}, {emp_name}, '
-            second = f'{r[i].get("completed")}, {r[i].get("title")}\n'
+            first = f'{r[i].get("userId")},{emp_name},'
+            second = f'{r[i].get("completed")},{r[i].get("title")}\n'
             f.write(first + second)
