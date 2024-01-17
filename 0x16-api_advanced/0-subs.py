@@ -15,5 +15,5 @@ def number_of_subscribers(subreddit):
                          headers={'User-agent': 'yourbot'},
                          allow_redirects=False)
         return json.loads(r.text)["data"]["subscribers"]
-    except KeyError:
+    except (KeyError, json.decoder.JSONDecodeError):
         return 0
