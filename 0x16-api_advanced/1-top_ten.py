@@ -16,5 +16,5 @@ def top_ten(subreddit):
         titles = json.loads(r.text)["data"]["children"]
         for e in titles[1:]:
             print(e["data"]["title"])
-    except KeyError:
+    except (KeyError, json.decoder.JSONDecodeError):
         print(None)
