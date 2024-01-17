@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     try:
         r = requests.get("https://www.reddit.com/r/{}/about.json".format(
                           subreddit),
-                         headers={'User-agent': 'yourbot'},
+                         headers={'User-agent': 'yourbot2'},
                          allow_redirects=False)
         return json.loads(r.text)["data"]["subscribers"]
     except (KeyError, json.decoder.JSONDecodeError):
