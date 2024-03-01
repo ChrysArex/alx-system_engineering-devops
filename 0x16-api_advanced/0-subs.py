@@ -12,6 +12,10 @@ def number_of_subscribers(subreddit):
                      headers={'User-agent': 'ojij'},
                      allow_redirects=False)
     if r.status_code == 200:
-        return r.json().get("data").get("subscribers")
-    elif r.status_code == 404:
+        try:
+            count = r.json().get("data").get("subscribers")
+            return count
+        except KeyError:
+            return 0
+    else:
         return 0
